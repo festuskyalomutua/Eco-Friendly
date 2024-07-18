@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mambo Doc</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<nav>
+    <ul
+        <li><a href="#home">Home</a></li>
+        <li><a href="#Services">Services</a></li>
+        <li><a href="#About">About Us</a></li>
+        <li><a href="#blog">Blog</a></li>
+        <li><a href="Contact">Contact</a></li>
+    </ul>
+</nav>
+<body>
+        <header>
+        <h1>Mambo Doc</h1>
+        <p>Your Well bieng is our priority</p>
+    </header>
+        <div class="marquee-container">
+            <div class="marquee">Welcome to Mambo Doc</div>
+<section id="Home">
+        <h2><b>Mambo Doc</b></h2>
+    <p><b>A one stop solution for Your Medical solutions</b></p>
+</section>
+
+<section id="About">
+    <h2><b>Our Mission</b></h2>
+    <p><b>Dedicated to providing cutting edge medical Tech solutions</b></p>
+</section>
+<section class="services">
+    <div class="small-container">
+        <h2>Services</h2>
+        <section class="features">
+            <div class="feature-item">
+                <h1>Consultancy Services</h1>
+                <img src="Consultancy service.jpg" alt="Consultancy Sevice">
+                <p>We offer HIV medication Consultancy. We strive to be the leading Consultancy firm in the field of HIV medication in Kenya</p>
+            </div>
+            <div class="feature-item">
+                <h2>HIV patients Database</h2>
+                <img src="Hiv treatment.jpg" alt="Hiv treatment">
+                <p>We have what it takes in terms of expertise guidance on Waste reduction, reccyling and reuse. Together with other partners, we make our environment cleaner and greener for future generations </p>
+                        </div>
+                        </div>
+                    </div>
+        </section>
+<section id="blog">
+            <div class="blog-container">
+            <header class="blog-header">
+            <h1>Mambo Doc Blog</h1>
+            <p>Latest updates and articles from Mambo Doc</p>
+            </header>
+            <article class="blog-post">
+            <h2>Welcome to Mambo Doc!</h2>
+            <div class="post-meta">Posted on July 13, 2024 by Admin</div>
+            <img src="welcome.jpg" alt="Welcome to Mambo Doc">
+                        </article>
+                        <!-- Additional blog posts -->
+            <article class="blog-post">
+            <h2>Understanding HIV Treatment</h2>
+            <div class="post-meta"></div>
+            <img src="hiv treatment.jpg" alt="HIV Treatment"
+                    </article>
+                      </div>                  
+                    </section>
+<section id="Contact">
+    <h2>Contact Us</h2>
+    <form action="Submit_form.php" method="post">
+    <label for="Name">Name:</label>
+    <input type="text" id="Name" name="name" required>
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" required>
+    <label for="Phone">Phone:</label>
+    <input type="tel" id="phone" name="Phone">
+    <label for="Message">Message:</label>
+    <textarea id="message" name="message" required></textarea>
+    <button type="submit">submit</button>
+    </form>
+</section>
+<script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
+<script type="text/javascript">
+    (function() {
+        emailjs.init("e1UMcON0EB8g_kNaW"); 
+    })();
+</script>
+
+<script type="text/javascript">
+    document.getElementById('contact-form').addEventListener('submit', function(event) {
+        event.preventDefault();
+
+        // Create the email parameters
+        const emailParams = {
+            from_name: this.from_name.value,
+            from_email: this.from_email.value,
+            phone_number: this.phone_number.value,
+            message: this.message.value,
+            reply_to: this.from_email.value // Set the reply-to email
+        };
+
+        emailjs.send('service_b7euldc', 'template_owo79wr', emailParams)
+            .then(function() {
+                alert('Thank you for contacting us!');
+                document.getElementById('contact-form').reset();
+            }, function(error) {
+                console.log('FAILED...', error);
+                alert('An error occurred. Please try again.');
+            });
+    });
+</script>
+   <div class="social-icons">
+ <a href="https://Daniel Masudi/+254702883425" style="background-color:green;"><i class="fab fa-whatsapp"></i></a>
+  <a href="https://www.facebook.com/profile.php?id=61550666797166&mibextid=ZbWKwL" style="background-color:blue;"><i class="fab fa-facebook-f"></i></a>
+  <a href="tiktok.com/@daniel_masudi"><i class="fab fa-tiktok"></i></a>
+ <a href="https://www.instagram.com/danielmasudi349"><i class="fab fa-instagram"></i></a>
+  <a href="https://x.com/MasudiDaniel"><i class="fab fa-twitter"></i></a>  
+</div>
+         
+<footer>
+    <p>&copy; 2024 Mambo Doc. All rights reserved.</p>
+</footer>
+
+<script src="scripts.js"></script>
+</body>
+</html>
